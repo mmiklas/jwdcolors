@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import pl.edu.wszib.jwd.jwdcolors.helper.ColorHelper;
 import pl.edu.wszib.jwd.jwdcolors.model.SelectedColor;
 import pl.edu.wszib.jwd.jwdcolors.service.SelectedColorService;
 
@@ -31,7 +32,7 @@ public class StatController {
         model.addAttribute("title", title);
         model.addAttribute("labels", dataMap.keySet());
         model.addAttribute("data", dataMap.values());
-        model.addAttribute("backgrounds", "");
+        model.addAttribute("backgrounds", ColorHelper.convertColors(dataMap.keySet()));
 
         return "stat";
     }
