@@ -1,4 +1,6 @@
-db.properties
+db-postgres.properties
+db-sqlserver.properties
+src/main/resources/db-sqlserver.properties
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
