@@ -36,4 +36,9 @@ public class SelectedColorController {
         model.addAttribute("title", title);
         return "select";
     }
+
+    @GetMapping("/")
+    public String showIndex() {
+        return "redirect:select";
+    }
 }
